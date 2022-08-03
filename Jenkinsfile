@@ -7,7 +7,7 @@ pipeline
         GIT_COMMIT_SHORT = sh(
      script: "printf \$(git rev-parse --short ${GIT_COMMIT})",
      returnStdout: true)
-        imageName = "pankajpatre11/myapp"
+        imageName = "myapp"
         registryCredentials = "dockerhub"
         registry = "18.208.249.204:8083"
         dockerImage = ''
@@ -93,7 +93,7 @@ pipeline
 		//	sh 'docker login -u pankajpatre11 -p Pankaj@2211' 
 		 //       sh 'docker push pankajpatre11/myapp' 
 		//	sh 'pwd'
-                  docker.withRegistry("https://docker.io", "dockerhub")
+                  docker.withRegistry("https://docker.io/pankajpatre11", "dockerhub")
                    {
 	            //sh 'docker tag myapp pankajpatre11/myapp'
                     sh 'docker images'
