@@ -89,16 +89,16 @@ pipeline
             steps
             {
                 script{ 
-		//	sh 'docker tag myapp pankajpatre11/myapp'			
-		//	sh 'docker login -u pankajpatre11 -p Pankaj@2211' 
-		 //       sh 'docker push pankajpatre11/myapp' 
-		//	sh 'pwd'
-                  docker.withRegistry("https://docker.io/pankajpatre11", "dockerhub")
-                   {
-	            sh 'docker tag myapp docker.io/myapp'
-                    sh 'docker images'
-                    dockerImage.push("latest")
-                   }
+			sh 'docker tag myapp pankajpatre11/myapp'			
+			sh 'docker login -u pankajpatre11 -p Pankaj@2211' 
+		        sh 'docker push pankajpatre11/myapp' 
+			sh 'pwd'
+                 // docker.withRegistry("https://docker.io/pankajpatre11", "dockerhub")
+                  // {
+	           // sh 'docker tag myapp docker.io/myapp'
+                    //sh 'docker images'
+                   // dockerImage.push("latest")
+                  // }
                 }
             }
          }	    
