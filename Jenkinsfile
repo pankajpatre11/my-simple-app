@@ -24,6 +24,7 @@ pipeline
                  sh script: 'mvn clean package'
             }
          }
+	    
          stage('SonarQubeServer') {
 		  steps {
                         sh '''
